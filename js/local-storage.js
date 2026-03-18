@@ -5,6 +5,19 @@ const addNumberToLS = () =>{
 
 }
 
+const setObjectToLS = () =>{
+    const customer = {name: 'rohim khalu', products: 3, price: 75 }
+    const customerJSON = JSON.stringify(customer)
+    localStorage.setItem('customer', customerJSON)   // ai avbe set hobe na
+}
+const readObjectFromLS = () =>{
+    const customerJSON = localStorage.getItem('customer')
+    const customer = JSON.parse(customerJSON);
+    console.log(customer)
+    console.log(customer.name)
+    console.log(typeof customerJSON)
+}
+
 const getNumberFromLS = () =>{
     const number = localStorage.getItem('number')
     console.log('from saved local storage', number)
